@@ -16,7 +16,9 @@ export class TotalListService {
       this.seatsServ
         .getSeats(eventId)
         .then((x) =>
-          x.map((tickets) => ({ ...tickets, Price: param[tickets.ZoneId] })),
+          x
+            .filter((elem) => elem.SeatStatusId === 0)
+            .map((tickets) => ({ ...tickets, Price: param[tickets.ZoneId] })),
         );
 
     async function promisesInSeries(asyncFns) {

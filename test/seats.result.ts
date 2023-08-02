@@ -15,7 +15,7 @@ export const seatsResult: AxiosResponse = {
       XPosition: 69,
       YPosition: 10,
       IsSeat: true,
-      SeatStatusId: 8,
+      SeatStatusId: 0,
       AisleIndicator: 'R',
       HasStairs: false,
       ScreenId: 9,
